@@ -4,7 +4,7 @@ import { scene } from './index.js';
 
 export let mixer= new THREE.AnimationMixer();
 export let action;
-export const gltfLoader2 = new GLTFLoader()
+const gltfLoader2 = new GLTFLoader()
     //gltfLoader2.load('./zawor_kulowy_three_move3.glb', (gltf) => {
     gltfLoader2.load('./zawor_kulowy_three_kula3_korpus.glb', (gltf) => {
       const root = gltf.scene;
