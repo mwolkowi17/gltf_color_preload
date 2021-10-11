@@ -31,7 +31,7 @@ gltfLoader3.load(model_kurek2, (gltf) => {
   root2 = gltf.scene;
   const anim = gltf.animations;
   //scene.add(root2); //co zrobic z tym?
-  mixer2 = new THREE.AnimationMixer(root);
+  mixer2 = new THREE.AnimationMixer(root2);
 
   action2 = mixer2.clipAction(anim[0])
 
