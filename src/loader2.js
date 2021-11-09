@@ -2,8 +2,8 @@ import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoade
 import * as THREE from 'three';
 import { scene } from './index.js';
 
-export let mixer2 = new THREE.AnimationMixer();
-export let action2;
+export let mixer2, mixer3;
+export let action2, action3;
 export let model_kurek;
 model_kurek = './zawor_kulowy_three_kula3_kurek.glb';
 let root;
@@ -13,11 +13,11 @@ const gltfLoader2 = new GLTFLoader()
 gltfLoader2.load(model_kurek, (gltf) => {
   root = gltf.scene;
   const anim = gltf.animations;
-  scene.add(root); //co zrobic z tym?
+   //co zrobic z tym?
   mixer2 = new THREE.AnimationMixer(root);
 
   action2 = mixer2.clipAction(anim[0])
-
+  scene.add(root);
   //action.play();
 
 
@@ -31,9 +31,9 @@ gltfLoader3.load(model_kurek2, (gltf) => {
   root2 = gltf.scene;
   const anim = gltf.animations;
   //scene.add(root2); //co zrobic z tym?
-  mixer2 = new THREE.AnimationMixer(root2);
+  mixer3 = new THREE.AnimationMixer(root2);
 
-  action2 = mixer2.clipAction(anim[0])
+  action3 = mixer3.clipAction(anim[0])
 
   //action.play();
 
@@ -45,6 +45,7 @@ colorbutton.addEventListener("click", function () {
   model_kurek = "./zawor_kulowy_three_kula3_kurek_blue.glb"
   scene.remove(root);
   scene.add(root2);
+  
   /*gltfLoader2.load(model_kurek, (gltf) => {
     root = gltf.scene;
     const anim = gltf.animations;
