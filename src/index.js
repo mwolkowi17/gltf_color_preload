@@ -13,7 +13,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
 document.body.appendChild(renderer.domElement);
 
-scene.background = new THREE.Color(0xFFFFFF);
+scene.background = new THREE.Color(0x000000);
 
 scene.add(light2);
 scene.add(light2.target);
@@ -86,7 +86,7 @@ colorbutton.addEventListener("click", function () {
 }, false);
 
 
-camera.position.z = 8;
+camera.position.z = 4;
 camera.position.y = 1.5;
 
 const controls = new OrbitControls(camera, renderer.domElement);

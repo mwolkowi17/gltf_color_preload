@@ -8,7 +8,7 @@ light2.target.position.set(-5, 0, 0);
 
 export const light3 = new THREE.DirectionalLight(color, intensity);
 
-light3.position.set(-3,10,4);
+light3.position.set(-3,-10,4);
 light3.target.position.set(3,0,0);
 
 export const light4 = new THREE.DirectionalLight(color, intensity)
